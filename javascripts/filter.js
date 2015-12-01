@@ -114,7 +114,6 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 					case 10: console.log("switch rating 10!");
 							favoriteMovies10.push(alphaFirebaseMovies[j]);
 						break;
-					// default: console.log(""); 
 				} 	
 	        }
 
