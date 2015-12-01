@@ -9,7 +9,6 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 // 	        $("#home-page .row").html(handlebars({movie: movies}));
 // 	      });
 
-
 			var read = false;
 
   		// snapshot
@@ -125,10 +124,10 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 	// initially populates page once you log in (i do it here to alphabetize it)
 	// right now i'm testing this if statement
 				if (read === false) {
-		      require(['hbs!../templates/unadded-poster'], function (handlebars) {
-		        $("#home-page .row").html(handlebars({movie: initialPop}));
-		        read = true;
-		      });
+		      		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+		        			$("#home-page .row").html(handlebars({movie: initialPop}));
+		        			read = true;
+		      		});
 				}
 
 	// click All button to display all firebase movies
@@ -156,105 +155,66 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 	// RED NOTES:
 	// SWITCH STATEMENT WOULD NOT WORK
 	// === WOULD NOT WORK -- HAS TO BE ==
-				$("#favoritesSlider").click(function () {
+				$("#favoritesSlider").change(function () {
 					var sliderValue = favoritesSlider.value;
 					// console.log("favoritesSlider is", sliderValue);
-					if (sliderValue == 0) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies}));
-				  })
-				}
-					if (sliderValue == 1) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies1}));
-				  })
-				}
-					if (sliderValue == 2) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies2}));
-				  })
-				}
-					if (sliderValue == 3) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies3}));
-				  })
-				}
-					if (sliderValue == 4) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies4}));
-				  })
-				}
-					if (sliderValue == 5) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies5}));
-				  })
-				}
-					if (sliderValue == 6) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies6}));
-				  })
-				}
-					if (sliderValue == 7) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies7}));
-				  })
-				}
-					if (sliderValue == 8) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies8}));
-				  })
-				}
-					if (sliderValue == 9) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies9}));
-				  })
-				}
-					if (sliderValue == 10) {
-				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
-				    $("#home-page .row").html(handlebars({movie: favoriteMovies10}));
-				  })
-				}
-
-				});
-
-
-
-				// switch (sliderValue) { 
-				// 	case 1: console.log("case 1!"); 
-
-				// 		break;
-				// 	case 2: console.log("case 2!"); 
-							
-				// 		break;
-				// 	case 3: console.log("case 3!"); 
-							
-				// 		break;
-				// 	case 4: console.log("case 4!"); 
-							
-				// 		break;
-				// 	case 5: console.log("case 5!"); 
-							
-				// 		break;
-				// 	case 6: console.log("case 6!");
-							 
-				// 		break;
-				// 	case 7: console.log("case 7!"); 
-							
-				// 		break;
-				// 	case 8: console.log("case 8!"); 
-							
-				// 		break;
-				// 	case 9: console.log("case 9!");  
-							
-				// 		break;
-				// 	case 10: console.log("case 10!");
-							
-				// 		break;
-				// 	// default: console.log(""); 
-				// };
-
-
-      });
+					if (sliderValue === "0") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies}));
+				  		});
+					}
+					if (sliderValue === "1") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies1}));
+				  		});
+					}
+					if (sliderValue === "2") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies2}));
+				  		});
+					}
+					if (sliderValue === "3") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies3}));
+				  		});
+					}
+					if (sliderValue === "4") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies4}));
+				  		});
+					}
+					if (sliderValue === "5") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies5}));
+				  		});
+					}
+					if (sliderValue === "6") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies6}));
+				  		});
+					}
+					if (sliderValue === "7") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies7}));
+				  		});
+					}
+					if (sliderValue === "8") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies8}));
+				  		});
+					}
+					if (sliderValue === "9") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies9}));
+				  		});
+					}
+					if (sliderValue === "10") {
+				    		require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    			$("#home-page .row").html(handlebars({movie: favoriteMovies10}));
+				  		});
+					}
+			});
   	});
-  }
+  });
+};
 });
