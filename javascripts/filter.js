@@ -159,69 +159,58 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 	// === WOULD NOT WORK -- HAS TO BE ==
 				$("#favoritesSlider").click(function () {
 					var sliderValue = favoritesSlider.value;
-					console.log("favoritesSlider is", sliderValue);
+					// console.log("favoritesSlider is", sliderValue);
 					if (sliderValue == 0) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies}));
 				  })
 				}
 					if (sliderValue == 1) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies1}));
 				  })
 				}
 					if (sliderValue == 2) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies2}));
 				  })
 				}
 					if (sliderValue == 3) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies3}));
 				  })
 				}
 					if (sliderValue == 4) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies4}));
 				  })
 				}
 					if (sliderValue == 5) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies5}));
 				  })
 				}
 					if (sliderValue == 6) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies6}));
 				  })
 				}
 					if (sliderValue == 7) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies7}));
 				  })
 				}
 					if (sliderValue == 8) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies8}));
 				  })
 				}
 					if (sliderValue == 9) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies9}));
 				  })
 				}
 					if (sliderValue == 10) {
-					console.log("inside if");
 				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies10}));
 				  })
