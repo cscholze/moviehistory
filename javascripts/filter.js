@@ -26,6 +26,16 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 	  		var unwatchedMovies =[];
 	  		var watchedMovies = [];
 	  		var favoriteMovies = [];
+	  		var favoriteMovies1 = [];
+	  		var favoriteMovies2 = [];
+  			var favoriteMovies3 = [];
+  			var favoriteMovies4 = [];
+  			var favoriteMovies5 = [];
+  			var favoriteMovies6 = [];
+  			var favoriteMovies7 = [];
+  			var favoriteMovies8 = [];
+  			var favoriteMovies9 = [];
+  			var favoriteMovies10 = [];
 
 	  		console.log("movies from filter, gets info from firebaseGetAjax", movies);
 	  		console.log("movies from filter, but from snapshot", firebaseMoviesObject);
@@ -66,11 +76,46 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 	        	} 
 	        }
 
-	// loops over alphabetized firebase movies and pushes movies with a rating of 5 into favorite movies array
+	// loops over alphabetized firebase movies and pushes movies with a rating of 0-10 into corresponding favorite movies arrays
 	        for (var j = 0; j < alphaFirebaseMovies.length; j++) {
-	        	if (alphaFirebaseMovies[j].rating === 5) {
+	        	if (alphaFirebaseMovies[j].rating > 0) {
 	        		favoriteMovies.push(alphaFirebaseMovies[j]);
 	        	}
+	        	var rating = alphaFirebaseMovies[j].rating;
+				// console.log("rating", rating);
+				switch (rating) { 
+					case 1: console.log("switch rating 1!"); 
+							favoriteMovies1.push(alphaFirebaseMovies[j]);
+						break;
+					case 2: console.log("switch rating 2!"); 
+							favoriteMovies2.push(alphaFirebaseMovies[j]);
+						break;
+					case 3: console.log("switch rating 3!"); 
+							favoriteMovies3.push(alphaFirebaseMovies[j]);
+						break;
+					case 4: console.log("switch rating 4!"); 
+							favoriteMovies4.push(alphaFirebaseMovies[j]);
+						break;
+					case 5: console.log("switch rating 5!"); 
+							favoriteMovies5.push(alphaFirebaseMovies[j]);
+						break;
+					case 6: console.log("switch rating 6!");
+							favoriteMovies6.push(alphaFirebaseMovies[j]);
+						break;
+					case 7: console.log("switch rating 7!"); 
+							favoriteMovies7.push(alphaFirebaseMovies[j]);
+						break;
+					case 8: console.log("switch rating 8!"); 
+							favoriteMovies8.push(alphaFirebaseMovies[j]);
+						break;
+					case 9: console.log("switch rating 9!");  
+							favoriteMovies9.push(alphaFirebaseMovies[j]);
+						break;
+					case 10: console.log("switch rating 10!");
+							favoriteMovies10.push(alphaFirebaseMovies[j]);
+						break;
+					// default: console.log(""); 
+				} 	
 	        }
 
 	        console.log("unwatchedMovies", unwatchedMovies);
@@ -108,16 +153,120 @@ define(["jquery", "lodash", "firebase-get-ajax"], function($, _, firebaseGetAjax
 				  });
 				});
 
-	// click Favorites button to display favorites firebase movies with rating of 5
-				$("#favoritesButton").click(function () {
-				  require(['hbs!../templates/unadded-poster'], function (handlebars) {
+	// click Favorites slider to display favorites firebase movies with rating of 0-10
+	// RED NOTES:
+	// SWITCH STATEMENT WOULD NOT WORK
+	// === WOULD NOT WORK -- HAS TO BE ==
+				$("#favoritesSlider").click(function () {
+					var sliderValue = favoritesSlider.value;
+					console.log("favoritesSlider is", sliderValue);
+					if (sliderValue == 0) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
 				    $("#home-page .row").html(handlebars({movie: favoriteMovies}));
-				  });
+				  })
+				}
+					if (sliderValue == 1) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies1}));
+				  })
+				}
+					if (sliderValue == 2) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies2}));
+				  })
+				}
+					if (sliderValue == 3) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies3}));
+				  })
+				}
+					if (sliderValue == 4) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies4}));
+				  })
+				}
+					if (sliderValue == 5) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies5}));
+				  })
+				}
+					if (sliderValue == 6) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies6}));
+				  })
+				}
+					if (sliderValue == 7) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies7}));
+				  })
+				}
+					if (sliderValue == 8) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies8}));
+				  })
+				}
+					if (sliderValue == 9) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies9}));
+				  })
+				}
+					if (sliderValue == 10) {
+					console.log("inside if");
+				    require(['hbs!../templates/unadded-poster'], function (handlebars) {
+				    $("#home-page .row").html(handlebars({movie: favoriteMovies10}));
+				  })
+				}
+
 				});
 
 
 
+				// switch (sliderValue) { 
+				// 	case 1: console.log("case 1!"); 
+
+				// 		break;
+				// 	case 2: console.log("case 2!"); 
+							
+				// 		break;
+				// 	case 3: console.log("case 3!"); 
+							
+				// 		break;
+				// 	case 4: console.log("case 4!"); 
+							
+				// 		break;
+				// 	case 5: console.log("case 5!"); 
+							
+				// 		break;
+				// 	case 6: console.log("case 6!");
+							 
+				// 		break;
+				// 	case 7: console.log("case 7!"); 
+							
+				// 		break;
+				// 	case 8: console.log("case 8!"); 
+							
+				// 		break;
+				// 	case 9: console.log("case 9!");  
+							
+				// 		break;
+				// 	case 10: console.log("case 10!");
+							
+				// 		break;
+				// 	// default: console.log(""); 
+				// };
+
+
       });
   	});
-  };	
+  }
 });

@@ -4,7 +4,7 @@ define(["q", "jquery"], function(Q, $) {
     var deferred = Q.defer();
 
     console.log(currentMovie);
-    console.log(Stars);
+    console.log("stars", Stars);
     console.log(uid);
     Stars = parseInt(Stars);
 
